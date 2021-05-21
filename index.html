@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Volunteer</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        label {
+            padding-bottom: 8px;
+        };
+    </style>
+</head>
+<body class="my-5 bg-light">
+    <div class="container my-3">
+        <h2 class="my-4 pt-2">Blood Request Form</h2>
+        <form id="blood_rq_details">
+
+            <div class="form-group mb-3">
+                <label for="requestRaisedDate">Request Raised On</label>
+                <input type="text" readonly class="form-control" id="requestRaisedDate" name="Request Raised Date" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="ngoName">Ngo Name (If Any) : </label>
+                <input type="text" class="form-control" id="ngoName" name="ngoName" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="city">City</label>
+                <select class="form-control" id="city" name="City">
+                    <option value="No City Selected">-- select city --</option>
+                    <option value="Ariyalur">Ariyalur</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Cuddalore">Cuddalore</option>
+                    <option value="Dharmapuri">Dharmapuri</option>
+                    <option value="Dindigul">Dindigul</option>
+                    <option value="Erode">Erode</option>
+                    <option value="Kallakurichi">Kallakurichi</option>
+                    <option value="Kanchipuram">Kanchipuram</option>
+                    <option value="Kanniyakumari">Kanniyakumari</option>
+                    <option value="Karur">Karur</option>
+                    <option value="Krishnagiri">Krishnagiri</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Nagapattinam">Nagapattinam</option>
+                    <option value="Namakkal">Namakkal</option>
+                    <option value="Nilgiris">Nilgiris</option>
+                    <option value="Perambalur">Perambalur</option>
+                    <option value="Pudukkottai">Pudukkottai</option>
+                    <option value="Ramanathapuram">Ramanathapuram</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Sivaganga">Sivaganga</option>
+                    <option value="Thanjavur">Thanjavur</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Thoothukudi">Thoothukudi</option>
+                    <option value="Tiruchirappalli">Tiruchirappalli</option>
+                    <option value="Tirunelveli">Tirunelveli</option>
+                    <option value="Tiruppur">Tiruppur</option>
+                    <option value="Tiruvallur">Tiruvallur</option>
+                    <option value="Tiruvannamalai">Tiruvannamalai</option>
+                    <option value="Tiruvarur">Tiruvarur</option>
+                    <option value="Vellore">Vellore</option>
+                    <option value="Viluppuram">Viluppuram</option>
+                    <option value="Virudhunagar">Virudhunagar</option>
+                </select>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="patientName">Patient Name</label>
+              <input type="text" class="form-control" id="patientName" name="patientName" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" id="age" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="bloodGroup">Blood Group</label>
+                <input type="text" class="form-control" id="bloodGroup" aria-describedby="bloodGroup" name="bloodGroup" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="requestType">Request Type</label>
+                <input type="text" class="form-control" id="requestType" aria-describedby="requestTypeDesc" name="requestType" placeholder="">
+                <small id="requestTypeDesc" class="form-text text-muted">(Blood, Plasma, Platelets)</small>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="noOfUnits">Units Required</label>
+              <input type="number" class="form-control" id="noOfUnits" name="noOfUnits" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="needFor">Need For</label>
+                <input type="text" class="form-control" id="needFor" aria-describedby="needForDesc" name="needFor" placeholder="">
+                <small id="needFor" class="form-text text-muted">(Reason for blood need)</small>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="hospitalName">Hospital Name & Address</label>
+              <input type="text" class="form-control" id="hospitalName" name="hospitalName" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="dateNTime">Date and Time</label>
+                <input type="text" class="form-control" id="dateNTime" name="dateNTime" placeholder="">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="attenderNameNumber">Attender Name & Number</label>
+                <input type="text" class="form-control" id="attenderNameNumber" name="attenderNameNumber" placeholder="">
+                <small id="attenderNameNumber" class="form-text text-muted">
+                    (Eg: Kalam - 9999888877)
+                </small>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="verifiedBy">Verified By</label>
+                <input type="text" class="form-control" id="verifiedBy" name="verifiedBy" placeholder=""
+                aria-describedby="verifiedBy">
+                <small id="verifiedBy" class="form-text text-muted">(Eg: Vivek - 9999888878 | Contact number optional)</small>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="additionalContext">Additional Context</label>
+                <input type="text" class="form-control" id="additionalContext" name="additionalContext" placeholder="">
+                <small id="additionalContext" class="form-text text-muted">(If any to mention.. can be empty)</small>
+            </div>
+        </form>
+        <button type="button" class="btn btn-success" onclick="shareToWhatsapp()">Share to Whatsapp 
+            <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+            </svg></button>
+        <button type="button" class="btn btn-secondary" onclick="copyAsPlainText()">Copy As Text</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            const date = document.getElementById("requestRaisedDate");
+            date.value = new Date().toLocaleDateString();
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+</html>
