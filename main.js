@@ -11,7 +11,7 @@ function shareToWhatsapp() {
 
     // actual data
     if(formData.ngoName) {
-        patient_data.push(`🔴*${formData.ngoName}*🔴`);
+        patient_data.push(`🔴 *${formData.ngoName}*🔴`);
         patient_data.push(" ");
     }
     patient_data.push("🩸 *Blood Request* 🩸")
@@ -34,7 +34,7 @@ function shareToWhatsapp() {
     patient_data.push(`✅ Verified By *${formData.verifiedBy}*`);
     patient_data.push(`✅ Verified and Posted On : *${formData.requestRaisedDate}*`);
     patient_data.push(" ");
-    patient_data.push("💉*Donate BLOOD Save LIFE*");
+    patient_data.push("💉 *Donate BLOOD Save LIFE*");
 
     window.location.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(
         patient_data.join("\n")
